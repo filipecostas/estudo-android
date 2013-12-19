@@ -16,5 +16,12 @@
 	    <string name="campoAno">Ano</string>
 	    <string name="botaoSalvar">Salvar</string>
 	    
+	    <!-- msgs -->
+	    	<string name="msgOk">OK</string>
+	    	<string name="msgAtencao">Atenção</string>
+	    	<string name="msgSucesso">Sucesso</string>
+	    	<string name="msgCamposObrigatorios">Todos os campos são obrigatorios</string>
+	    	<string name="msgRegistroSalvo">Registro salvo com sucesso.</string>
+	    
 
 </resources>

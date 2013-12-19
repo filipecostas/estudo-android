@@ -91,7 +91,7 @@ public class SqliteActivity extends ListActivity {
 		
 		if (listVeiculo.size() > 0) {
 			for (Veiculo v : listVeiculo)
-				arrayItens.add(String.format("nome: %s - marca: %s", v.getNome(), v.getMarca()));
+				arrayItens.add(String.format("id: [%s] nome: %s - marca: %s", v.getId(), v.getNome(), v.getMarca()));
 		}
 
 		setListAdapter(new ArrayAdapter<String>(this,

@@ -2,6 +2,7 @@ package br.gov.inmetro.estudoandroid01;
 
 import br.gov.inmetro.estudoandroid01.sqlite.Veiculo;
 import br.gov.inmetro.estudoandroid01.sqlite.VeiculoDAO;
+import br.gov.inmetro.estudoandroid01.util.Alerta;
 import br.gov.inmetro.estudoandroid01.util.Navegacao;
 import android.app.Activity;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class SqliteFormularioActivity extends Activity {
 	EditText editNome, editMarca, editAno;
 	Button btnSalvar;
 	Veiculo veiculo;
+	Alerta alerta;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -57,6 +59,7 @@ public class SqliteFormularioActivity extends Activity {
 		setContentView(R.layout.activity_sqlite_formulario);
 
 		nav = new Navegacao(this);
+		alerta = new Alerta(this);
 		daoVeiculo = new VeiculoDAO(this);
 
 		editNome = (EditText) findViewById(R.id.editNome);
@@ -74,14 +77,17 @@ public class SqliteFormularioActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-
-				veiculo = new Veiculo(editNome.getText().toString(), editMarca.getText().toString(),
-							Integer.parseInt(editAno.getText().toString()));
 				
-				if(!veiculo.getNome().isEmpty() && !veiculo.getMarca().isEmpty() && !(veiculo.getAno() > 0)) {
+				if(!editNome.getText().toString().isEmpty() && !editMarca.getText().toString().isEmpty() && !editAno.getText().toString().isEmpty()) {
+					veiculo = new Veiculo(editNome.getText().toString(), editMarca.getText().toString(),
+							Integer.parseInt(editAno.getText().toString()));
 					daoVeiculo.salvar(veiculo);
+					alerta.exibir(getString(R.string.msgSucesso), getString(R.string.msgRegistroSalvo), getString(R.string.msgOk));
+					editNome.setText(String.valueOf(""));
+					editMarca.setText(String.valueOf(""));
+					editAno.setText(String.valueOf(""));
 				} else {
-					
+					alerta.exibir(getString(R.string.msgAtencao), getString(R.string.msgCamposObrigatorios), getString(R.string.msgOk)); 
 				}
 					
 

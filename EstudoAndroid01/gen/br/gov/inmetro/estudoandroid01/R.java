@@ -58,6 +58,13 @@ public final class R {
         public static final int editar=0x7f050005;
         public static final int excluir=0x7f050006;
         public static final int listar=0x7f050007;
+        public static final int msgAtencao=0x7f05000d;
+        public static final int msgCamposObrigatorios=0x7f05000f;
+        /**  msgs 
+         */
+        public static final int msgOk=0x7f05000c;
+        public static final int msgRegistroSalvo=0x7f050010;
+        public static final int msgSucesso=0x7f05000e;
         public static final int principal=0x7f050002;
         /**  sqlite 
          */
