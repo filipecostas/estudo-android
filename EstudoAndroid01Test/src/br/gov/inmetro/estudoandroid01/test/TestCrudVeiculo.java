@@ -17,14 +17,15 @@ public class TestCrudVeiculo extends AndroidTestCase {
 
 	@Override
 	public void tearDown() {
+		
 	}
 
 	public void test01Salvar() {
-		Veiculo v = new Veiculo("carro1", "mercedes", 1993);
+		Veiculo v = new Veiculo("Fiesta Preto", "Ford", 2009);
 		dao.salvar(v);
 		List<Veiculo> listVeiculo = dao.listarTodos();
 		
-		assertEquals(listVeiculo.get(0).getNome(), "carro1");
+		assertEquals(listVeiculo.get(0).getNome(), "Fiesta Preto");
 	}
 
 	public void test02ListarTodos() {

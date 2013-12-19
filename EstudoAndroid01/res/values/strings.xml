@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">EstudoAndroid01</string>
+    <string name="app_name">App Estudo Android</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="principal">Principal</string>
+    
+    <!-- sqlite -->
+	    <string name="sqlite">SQLite</string>
+	    <string name="cadastrar">Cadastrar</string>
+	    <string name="editar">Editar</string>
+	    <string name="excluir">Excluir</string>
+	    <string name="listar">Listar Todos</string>
+	    <string name="campoNome">Nome</string>
+	    <string name="campoMarca">Marca</string>
+	    <string name="campoAno">Ano</string>
+	    <string name="botaoSalvar">Salvar</string>
+	    
 
 </resources>

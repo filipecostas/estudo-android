@@ -1,5 +1,6 @@
 package br.gov.inmetro.estudoandroid01.sqlite;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.content.ContentValues;
@@ -22,7 +23,7 @@ public class VeiculoDAO implements DAOSQLite<Veiculo> {
 	private SQLiteDatabase dataBase = null;
 	private static VeiculoDAO instance;
 
-	private VeiculoDAO(Context context) {
+	public VeiculoDAO(Context context) {
 		PersistenceHelper persistenceHelper = PersistenceHelper
 				.getInstance(context);
 		dataBase = persistenceHelper.getWritableDatabase();
@@ -69,40 +70,50 @@ public class VeiculoDAO implements DAOSQLite<Veiculo> {
 	private List<Veiculo> construirVeiculoPorCursor(Cursor cursor) {
 
 		// isolando
-		CursorSQLite<Veiculo> cursorSqlite = new CursorSQLite<Veiculo>(cursor);
-		cursorSqlite.addCampo(ID).addCampo(NOME).addCampo(MARCA).addCampo(ANO);
-		Veiculo v = new Veiculo(cursorSqlite.getValue(1).toString(),
-				cursorSqlite.getValue(2).toString(),
-				(Integer) cursorSqlite.getValue(3));
-		v.setId((Integer) cursorSqlite.getValue(0));
-		CursorSQLite.setInstancia(v);
-		return cursorSqlite.constroiCursor();
-
-		/*
-		 * List<Veiculo> veiculos = new ArrayList<Veiculo>();
-		 * 
-		 * if(cursor == null) return veiculos; try {
-		 * 
-		 * if (cursor.moveToFirst()) { do {
-		 * 
-		 * int indexID = cursor.getColumnIndex(ID); int indexNome =
-		 * cursor.getColumnIndex(NOME); int indexMarca =
-		 * cursor.getColumnIndex(MARCA); int indexAno =
-		 * cursor.getColumnIndex(ANO);
-		 * 
-		 * long id = cursor.getInt(indexID); String nome =
-		 * cursor.getString(indexNome); String marca =
-		 * cursor.getString(indexMarca); int ano = cursor.getInt(indexAno);
-		 * 
-		 * Veiculo veiculo = new Veiculo(nome, marca, ano); veiculo.setId(id);
-		 * veiculos.add(veiculo);
-		 * 
-		 * } while (cursor.moveToNext()); }
-		 * 
-		 * } finally { cursor.close(); }
-		 * 
-		 * return veiculos;
+		 /* 
+		 CursorSQLite<Veiculo> cursorSqlite = new
+		 CursorSQLite<Veiculo>(cursor);
+		 cursorSqlite.addCampo(ID).addCampo(NOME).addCampo(MARCA).addCampo(ANO); 
+		 Veiculo v = new Veiculo(cursorSqlite.getValue(1).toString(),
+		 cursorSqlite.getValue(2).toString(), (Integer)
+		 cursorSqlite.getValue(3)); v.setId((Integer)
+		 cursorSqlite.getValue(0)); CursorSQLite.setInstancia(v); return
+		 cursorSqlite.constroiCursor();
 		 */
+		 
+
+		List<Veiculo> veiculos = new ArrayList<Veiculo>();
+
+		if (cursor == null)
+			return veiculos;
+		try {
+
+			if (cursor.moveToFirst()) {
+				do {
+
+					int indexID = cursor.getColumnIndex(ID);
+					int indexNome = cursor.getColumnIndex(NOME);
+					int indexMarca = cursor.getColumnIndex(MARCA);
+					int indexAno = cursor.getColumnIndex(ANO);
+
+					long id = cursor.getInt(indexID);
+					String nome = cursor.getString(indexNome);
+					String marca = cursor.getString(indexMarca);
+					int ano = cursor.getInt(indexAno);
+
+					Veiculo veiculo = new Veiculo(nome, marca, ano);
+					veiculo.setId(id);
+					veiculos.add(veiculo);
+
+				} while (cursor.moveToNext());
+			}
+
+		} finally {
+			cursor.close();
+		}
+
+		return veiculos;
+
 	}
 
 	private ContentValues gerarContentValeuesVeiculo(Veiculo veiculo) {
