@@ -5,6 +5,7 @@ import br.gov.inmetro.estudoandroid01.sqlite.VeiculoDAO;
 import br.gov.inmetro.estudoandroid01.util.Alerta;
 import br.gov.inmetro.estudoandroid01.util.Navegacao;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -23,10 +24,12 @@ public class SqliteFormularioActivity extends Activity {
 
 	private Navegacao nav;
 	private VeiculoDAO daoVeiculo;
-	EditText editNome, editMarca, editAno;
-	Button btnSalvar;
-	Veiculo veiculo;
-	Alerta alerta;
+	private EditText editNome, editMarca, editAno;
+	private Button btnSalvar;
+	private Veiculo veiculo;
+	private Alerta alerta;
+	private Intent intent;
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -66,6 +69,15 @@ public class SqliteFormularioActivity extends Activity {
 		editMarca = (EditText) findViewById(R.id.editMarca);
 		editAno = (EditText) findViewById(R.id.editAno);
 		btnSalvar = (Button) findViewById(R.id.btnSalvar);
+		
+		intent = getIntent();
+		int id = intent.getExtras().getInt("id");
+		if(id > 0) {
+			veiculo = daoVeiculo.retornarPorId(id);
+			editNome.setText(veiculo.getNome());
+			editMarca.setText(veiculo.getMarca());
+			editAno.setText(veiculo.getAno());
+		}
 
 	}
 

@@ -122,7 +122,8 @@ public class SqliteActivity extends ListActivity {
 							case 0:
 								//Toast.makeText(SqliteActivity.this, arrayItensId.get(position).toString(), Toast.LENGTH_SHORT).show();
 								//nav.getItent().putExtra("id", arrayItensId.get(position));
-								//nav.irPara(SqliteFormularioActivity.class);
+								nav.irPara(SqliteFormularioActivity.class);
+								nav.getItent().putExtra("id", arrayItensId.get(position));
 								break;
 								
 							case 1:

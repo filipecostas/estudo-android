@@ -66,6 +66,14 @@ public class VeiculoDAO implements DAOSQLite<Veiculo> {
 
 		dataBase.update(TABELA, valores, ID + " = ?", valoresParaSubstituir);
 	}
+	
+	public Veiculo retornarPorId(int id) {
+		String queryReturnAll = "SELECT * FROM " + TABELA + " WHERE id = " + id;
+		Cursor cursor = dataBase.rawQuery(queryReturnAll, null);
+		List<Veiculo> veiculos = construirVeiculoPorCursor(cursor);
+
+		return veiculos.get(0);
+	}
 
 	private List<Veiculo> construirVeiculoPorCursor(Cursor cursor) {
 
