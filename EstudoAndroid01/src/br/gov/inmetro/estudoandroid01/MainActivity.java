@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				navegacao.irPara(SqliteActivity.class);
+				navegacao.irPara(SqliteActivity.class).start();
 			}
 			
 		});

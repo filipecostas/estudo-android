@@ -64,6 +64,7 @@ public final class R {
         public static final int msgCamposObrigatorios=0x7f050012;
         public static final int msgOk=0x7f050005;
         public static final int msgOpcoes=0x7f050004;
+        public static final int msgRegistroAlterado=0x7f050014;
         public static final int msgRegistroSalvo=0x7f050013;
         public static final int msgSucesso=0x7f050007;
         public static final int nulo=0x7f050000;

@@ -15,30 +15,27 @@ import android.content.Intent;
 public class Navegacao {
 
 	private Activity activity;
-	private Intent itent;
+	private Intent intent;
 
-	public Intent getItent() {
-		return itent;
+	public Intent getIntent() {
+		return intent;
 	}
 
-	public void setItent(Intent itent) {
-		this.itent = itent;
+	public void setintent(Intent intent) {
+		this.intent = intent;
 	}
 		
 	public Navegacao(Activity activity) {
 		this.activity = activity;
 	}
 	
-	public void irPara(Class<?> alvo) {
-		itent = new Intent(activity, alvo);
-		activity.startActivity(itent);
+	public Navegacao irPara(Class<?> alvo) {
+		intent = new Intent(activity, alvo);
+		return this;
 	}
 	
-	public void post(ArrayList<String> params, ArrayList<String> itens) {
-		for(int i = 0; i < params.size(); i++) {
-			itent.putExtra(params.get(i), itens.get(i));
-		}
+	public Navegacao start() {
+		activity.startActivity(intent);
+		return this;
 	}
-
-	
 }

@@ -25,5 +25,6 @@
 		    <!-- msgs -->
 			    <string name="msgCamposObrigatorios">Todos os campos são obrigatorios</string>
 			    <string name="msgRegistroSalvo">Registro salvo com sucesso.</string>
+			    <string name="msgRegistroAlterado">Registro alterado com sucesso.</string>
 
 </resources>

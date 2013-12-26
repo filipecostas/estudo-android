@@ -27,7 +27,6 @@ public class VeiculoDAO implements DAOSQLite<Veiculo> {
 		PersistenceHelper persistenceHelper = PersistenceHelper
 				.getInstance(context);
 		dataBase = persistenceHelper.getWritableDatabase();
-
 	}
 
 	public static VeiculoDAO getInstance(Context context) {
@@ -67,7 +66,7 @@ public class VeiculoDAO implements DAOSQLite<Veiculo> {
 		dataBase.update(TABELA, valores, ID + " = ?", valoresParaSubstituir);
 	}
 	
-	public Veiculo retornarPorId(int id) {
+	public Veiculo retornarPorId(long id) {
 		String queryReturnAll = "SELECT * FROM " + TABELA + " WHERE id = " + id;
 		Cursor cursor = dataBase.rawQuery(queryReturnAll, null);
 		List<Veiculo> veiculos = construirVeiculoPorCursor(cursor);
@@ -121,8 +120,8 @@ public class VeiculoDAO implements DAOSQLite<Veiculo> {
 		}
 
 		return veiculos;
-
 	}
+	
 
 	private ContentValues gerarContentValeuesVeiculo(Veiculo veiculo) {
 		ContentValues values = new ContentValues();
@@ -133,6 +132,7 @@ public class VeiculoDAO implements DAOSQLite<Veiculo> {
 		return values;
 	}
 
+	
 	public void fecharConexao() {
 		if (dataBase != null && dataBase.isOpen())
 			dataBase.close();
