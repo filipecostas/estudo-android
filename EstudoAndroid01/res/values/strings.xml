@@ -10,21 +10,33 @@
     <string name="msgAtencao">Atenção</string>
     <string name="msgSucesso">Sucesso</string>
 
-	    <!-- sqlite -->
-		    <string name="sqlite">SQLite</string>
-		    <string name="cadastrar">Cadastrar</string>
-		    <string name="editar">Editar</string>
-		    <string name="excluir">Excluir</string>
-		    <string name="verDetalhes">Ver detalhes</string>
-		    <string name="listar">Listar Todos</string>
-		    <string name="campoNome">Nome</string>
-		    <string name="campoMarca">Marca</string>
-		    <string name="campoAno">Ano</string>
-		    <string name="botaoSalvar">Salvar</string>
+    <!-- sqlite -->
+	    <string name="sqlite">SQLite</string>
+	    <string name="cadastrar">Cadastrar</string>
+	    <string name="editar">Editar</string>
+	    <string name="excluir">Excluir</string>
+	    <string name="verDetalhes">Ver detalhes</string>
+	    <string name="listar">Listar Todos</string>
+	    <string name="campoNome">Nome</string>
+	    <string name="campoMarca">Marca</string>
+	    <string name="campoAno">Ano</string>
+	    <string name="botaoSalvar">Salvar</string>
+	
+	    <!-- msgs -->
+		    <string name="msgCamposObrigatorios">Todos os campos são obrigatorios</string>
+		    <string name="msgRegistroSalvo">Registro salvo com sucesso.</string>
+		    <string name="msgRegistroAlterado">Registro alterado com sucesso.</string>
+		    
+	<!-- storage -->
+		<string name="storage">Storage</string>
 		
-		    <!-- msgs -->
-			    <string name="msgCamposObrigatorios">Todos os campos são obrigatorios</string>
-			    <string name="msgRegistroSalvo">Registro salvo com sucesso.</string>
-			    <string name="msgRegistroAlterado">Registro alterado com sucesso.</string>
+	<!-- jpa -->
+		<string name="jpaAndroid">JPA Android</string>
+		
+	<!-- aerogear -->
+		<string name="aerogear">Aerogear</string>
+		
+	<!-- droid persistence -->
+		<string name="droidPersistence">Droid Persistence</string>
 
 </resources>
