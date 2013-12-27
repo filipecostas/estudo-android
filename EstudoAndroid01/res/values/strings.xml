@@ -29,6 +29,11 @@
 		    
 	<!-- storage -->
 		<string name="storage">Storage</string>
+		<string name="campoNomeArquivo">Nome do arquivo</string>
+		<string name="campoConteudoArquivo">Conteudo do arquivo</string>
+		<string name="botaoSalvarArquivo">Gerar arquivo</string>
+		<string name="botaoListarArquivo">Listar arquivos</string>
+		<string name="listarArquivos">Listar arquivos</string>
 		
 	<!-- jpa -->
 		<string name="jpaAndroid">JPA Android</string>

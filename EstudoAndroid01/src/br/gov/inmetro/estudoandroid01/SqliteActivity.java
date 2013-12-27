@@ -1,22 +1,14 @@
 package br.gov.inmetro.estudoandroid01;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-
-import br.gov.inmetro.estudoandroid01.sqlite.Veiculo;
-import br.gov.inmetro.estudoandroid01.sqlite.VeiculoDAO;
-import br.gov.inmetro.estudoandroid01.util.AlertaMenu;
-import br.gov.inmetro.estudoandroid01.util.Navegacao;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
-import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -24,11 +16,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import br.gov.inmetro.estudoandroid01.sqlite.Veiculo;
+import br.gov.inmetro.estudoandroid01.sqlite.VeiculoDAO;
+import br.gov.inmetro.estudoandroid01.util.AlertaMenu;
+import br.gov.inmetro.estudoandroid01.util.Navegacao;
 
 /**
  * 

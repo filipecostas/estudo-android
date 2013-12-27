@@ -1,11 +1,6 @@
 package br.gov.inmetro.estudoandroid01;
 
-import br.gov.inmetro.estudoandroid01.sqlite.Veiculo;
-import br.gov.inmetro.estudoandroid01.sqlite.VeiculoDAO;
-import br.gov.inmetro.estudoandroid01.util.Alerta;
-import br.gov.inmetro.estudoandroid01.util.Navegacao;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,6 +9,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import br.gov.inmetro.estudoandroid01.sqlite.Veiculo;
+import br.gov.inmetro.estudoandroid01.sqlite.VeiculoDAO;
+import br.gov.inmetro.estudoandroid01.util.Alerta;
+import br.gov.inmetro.estudoandroid01.util.Navegacao;
 
 /**
  * 
@@ -22,7 +21,7 @@ import android.widget.EditText;
  */
 public class SqliteFormularioActivity extends Activity {
 
-	private Navegacao nav;
+	private Navegacao navegacao;
 	private VeiculoDAO daoVeiculo;
 	private EditText editNome, editMarca, editAno;
 	private Button btnSalvar;
@@ -43,13 +42,13 @@ public class SqliteFormularioActivity extends Activity {
 
 		switch (item.getItemId()) {
 		case R.id.principal:
-			nav.irPara(MainActivity.class).start();
+			navegacao.irPara(MainActivity.class).start();
 			return true;
 		case R.id.cadastrar:
-			nav.irPara(SqliteFormularioActivity.class).start();
+			navegacao.irPara(SqliteFormularioActivity.class).start();
 			return true;
 		case R.id.listar:
-			nav.irPara(SqliteActivity.class).start();
+			navegacao.irPara(SqliteActivity.class).start();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -62,7 +61,7 @@ public class SqliteFormularioActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sqlite_formulario);
 
-		nav = new Navegacao(this);
+		navegacao = new Navegacao(this);
 		alerta = new Alerta(this);
 		daoVeiculo = new VeiculoDAO(this);
 		editNome = (EditText) findViewById(R.id.editNome);

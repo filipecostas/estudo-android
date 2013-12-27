@@ -1,6 +1,7 @@
 package br.gov.inmetro.estudoandroid01;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,6 +12,9 @@ public class MainActivity extends Activity {
 
 	private Button btnSqlite;
 	private Navegacao navegacao;
+	private Button btnStorage;
+	private Button btnAerogear;
+	private Button btnJpaAndroid;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,9 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		btnSqlite = (Button)findViewById(R.id.btnSqlite);
+		btnStorage = (Button)findViewById(R.id.btnStorage);
+		btnAerogear = (Button)findViewById(R.id.btnAeroGear);
+		btnJpaAndroid = (Button)findViewById(R.id.btnJpaAndroid);
 		navegacao = new Navegacao(MainActivity.this);
 		
 	}
@@ -25,6 +32,15 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onStart() {
 		super.onStart();
+		
+		btnStorage.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				navegacao.irPara(StorageActivity.class).start();
+			}
+			
+		});
 		
 		btnSqlite.setOnClickListener(new OnClickListener(){
 
