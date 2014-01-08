@@ -34,6 +34,10 @@
             android:name="br.gov.inmetro.estudoandroid01.StorageActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="br.gov.inmetro.estudoandroid01.JpaActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
