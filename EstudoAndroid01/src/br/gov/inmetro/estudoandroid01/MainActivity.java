@@ -13,7 +13,6 @@ public class MainActivity extends Activity {
 	private Button btnSqlite;
 	private Navegacao navegacao;
 	private Button btnStorage;
-	private Button btnAerogear;
 	private Button btnJpaAndroid;
 	
 	@Override
@@ -23,7 +22,6 @@ public class MainActivity extends Activity {
 		
 		btnSqlite = (Button)findViewById(R.id.btnSqlite);
 		btnStorage = (Button)findViewById(R.id.btnStorage);
-		btnAerogear = (Button)findViewById(R.id.btnAeroGear);
 		btnJpaAndroid = (Button)findViewById(R.id.btnJpaAndroid);
 		navegacao = new Navegacao(MainActivity.this);
 		
@@ -47,6 +45,15 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				navegacao.irPara(SqliteActivity.class).start();
+			}
+			
+		});
+		
+		btnJpaAndroid.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				navegacao.irPara(JpaActivity.class).start();
 			}
 			
 		});

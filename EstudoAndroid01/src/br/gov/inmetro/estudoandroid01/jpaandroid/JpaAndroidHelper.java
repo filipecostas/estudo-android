@@ -24,6 +24,7 @@ public class JpaAndroidHelper<E> extends OrmLiteSqliteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db, ConnectionSource src) {
 		try {
+			//implementar a criacao de tabelas com base na classe mapeada
 			TableUtils.createTable(src, Cliente.class);
 		} catch (Exception e) {
 			e.printStackTrace();
