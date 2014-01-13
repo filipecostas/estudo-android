@@ -14,6 +14,7 @@ public class MainActivity extends Activity {
 	private Navegacao navegacao;
 	private Button btnStorage;
 	private Button btnJpaAndroid;
+	private Button btnJasDb;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends Activity {
 		btnSqlite = (Button)findViewById(R.id.btnSqlite);
 		btnStorage = (Button)findViewById(R.id.btnStorage);
 		btnJpaAndroid = (Button)findViewById(R.id.btnJpaAndroid);
+		btnJasDb = (Button)findViewById(R.id.btnJasDb);
 		navegacao = new Navegacao(MainActivity.this);
 		
 	}
@@ -58,6 +60,18 @@ public class MainActivity extends Activity {
 			
 		});
 		
+		btnJasDb.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				navegacao.irPara(JasdbActivity.class).start();
+			}
+			
+		});
+		
+		
+		
+		
 	}
 
 	@Override
@@ -91,3 +105,9 @@ public class MainActivity extends Activity {
 	}
 
 }
+
+
+
+
+
+

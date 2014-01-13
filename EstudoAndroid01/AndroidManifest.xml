@@ -38,6 +38,10 @@
             android:name="br.gov.inmetro.estudoandroid01.JpaActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="br.gov.inmetro.estudoandroid01.JasdbActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

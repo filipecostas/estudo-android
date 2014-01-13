@@ -43,5 +43,8 @@
 		
 	<!-- droid persistence -->
 		<string name="droidPersistence">Droid Persistence</string>
+		
+	<!-- jas db -->
+		<string name="jasDb">jasDB</string>
 
 </resources>

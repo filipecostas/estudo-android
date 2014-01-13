@@ -99,7 +99,7 @@ public class StorageActivity extends Activity {
 				StringBuilder strbuilder = new StringBuilder();
 				File[] arrayFile = arquivo.listarArquivos();
 				for(File arquivo : arrayFile) {
-					strbuilder.append(String.format("nome: %s tam: %sKb\n", arquivo.getName(), (arquivo.length())));
+					strbuilder.append(String.format("nome: %s tam: %sb\n", arquivo.getName(), (arquivo.length())));
 				}
 				alerta.exibir(getString(R.string.listarArquivos), strbuilder.toString(), getString(R.string.msgOk));
 			}
