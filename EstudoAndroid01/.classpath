@@ -8,24 +8,5 @@
 	<classpathentry kind="lib" path="libs/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
 	<classpathentry kind="lib" path="libs/ormlite-android-4.48.jar"/>
 	<classpathentry kind="lib" path="libs/ormlite-core-4.48.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/aopalliance.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/asm.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/guava.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/guice.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/jackson-core-asl.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/jackson-mapper-asl.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/jasdb_android.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/jasdb_api.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/jasdb_core.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/jasdb_index_btreeplus.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/jasdb_localservice.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/jasdb_transwriter.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/javax.inject.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/logback-android-classic.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/logback-android-core.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/ren_core.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/slf4j-api.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/spring-core.jar"/>
-	<classpathentry kind="lib" path="libs/jasdb/spring-security-core.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

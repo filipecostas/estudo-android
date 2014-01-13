@@ -3,7 +3,7 @@ package br.gov.inmetro.estudoandroid01;
 import nl.renarj.jasdb.api.DBSession;
 import nl.renarj.jasdb.api.SimpleEntity;
 import nl.renarj.jasdb.api.model.EntityBag;
-import nl.renarj.jasdb.core.exceptions.*;
+import nl.renarj.jasdb.core.exceptions.JasDBStorageException;
 
 import com.obera.jasdb.android.AndroidDBSession;
 
