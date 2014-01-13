@@ -1,0 +1,12 @@
+DEPENDENCIAS PARA TRABALHAR COM JASDB CASO NAO UTILIZE O MAVEN
+-----------------------------------------------------------------
+
+Bibliotecas de jasdb-0.8
+------------------------------------------------
+
+dependencias:
+
+	- androidlibs/*
+	- lib/jasdb_core.jar
+
+Caso nao execute, inclua outras bibliotecas da lib principal
