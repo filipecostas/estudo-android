@@ -1,0 +1,37 @@
+00000ac8-a15f-62a6-0000-014392368b19
+
+
+01-14 14:59:10.070: I/JasDB(31736): Criando bag: 
+
+{"__ID":"00000b1c-eebb-a232-0000-0143923c1174","properties":{"Email":["flp.costas@gmail.com","carols@gmail.com"],"Idade":["29","28"],"Nome":["Filipe Costa","Caroline Souza"],"__ID":"00000b1c-eebb-a232-0000-0143923c1174"}}
+
+
+01-14 14:59:09.520: I/JasDB(31736): Criando bag: 
+{"__ID":"00000af9-794c-af08-0000-01439239be8e",
+"properties":{"Email":["flp.costas@gmail.com","carols@gmail.com"],"Idade":["29","28"],"Nome":["Filipe Costa","Caroline Souza"],"__ID":"00000af9-794c-af08-0000-01439239be8e"}}
+
+
+
+01-14 14:58:43.679: I/JasDB(31736): Criando bag: {"__ID":"0000074a-16a1-2101-0000-014391fbeb2c","properties":{"Email":"carols@gmail.com","Idade":28,"Nome":"Caroline Souza","__ID":"0000074a-16a1-2101-0000-014391fbeb2c"}}
+
+
+
+Storage -> bagFile -> path
+/data/data/br.gov.inmetro.estudoandroid01/files/.jasdb/Pessoa.pjs
+
+
+01-14 15:15:08.150: I/JasDB(3599): Criando bag: {"__ID":"00000d81-c0b1-e9dd-0000-014392643adf","properties":{"Email":"flp.costas@gmail.com","Idade":29,"Nome":"Filipe Costa","__ID":"00000d81-c0b1-e9dd-0000-014392643adf"}}
+
+
+01-14 15:15:11.700: I/JasDB(3599): Criando bag: {"__ID":"00000d81-c0b1-e9dd-0000-014392643ae0","properties":{"Email":"carols@gmail.com","Idade":28,"Nome":"Caroline Souza","__ID":"00000d81-c0b1-e9dd-0000-014392643ae0"}}
+
+
+01-14 15:15:14.760: I/JasDB(3599): Criando bag: {"__ID":"00000d81-c0b1-e9dd-0000-014392643ae1","properties":{"Email":"dcbelmont@gmail.com","Idade":31,"Nome":"David Belmont","__ID":"00000d81-c0b1-e9dd-0000-014392643ae1"}}
+
+
+01-14 15:15:19.000: I/JasDB(3599): Criando bag: {"__ID":"00000d81-c0b1-e9dd-0000-014392643ae2","properties":{"Email":"wslima@gmail.com","Idade":26,"Nome":"Wellington Lima","__ID":"00000d81-c0b1-e9dd-0000-014392643ae2"}}
+
+
+
+01-14 16:16:42.029: I/SessaoJasdb(10530): 
+Listando bag: name: Pessoa, size: class nl.renarj.jasdb.storage.entities.EntityBagImpl
