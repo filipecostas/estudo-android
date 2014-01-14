@@ -21,7 +21,7 @@ public class JasdbActivity extends Activity {
 		try {
 			DBSession session = new AndroidDBSession(getApplicationContext());
 			EntityBag bag = session.createOrGetBag("bag1");
-			String documentedId = bag.addEntity(new SimpleEntity().addProperty("testProperty", "SimpleValue")).getInternalId();
+			String documentedId = bag.addEntity(new SimpleEntity().addProperty("nome", "fulando de tal")).getInternalId();
 
 			Log.i("JasDb", "Found entity: " + SimpleEntity.toJson(bag.getEntity(documentedId)));
 			
