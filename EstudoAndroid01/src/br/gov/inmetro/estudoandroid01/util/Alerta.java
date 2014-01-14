@@ -1,12 +1,8 @@
 package br.gov.inmetro.estudoandroid01.util;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 
 /**
  * Classe para cria alertas

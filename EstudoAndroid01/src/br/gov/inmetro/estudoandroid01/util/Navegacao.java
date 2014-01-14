@@ -1,8 +1,5 @@
 package br.gov.inmetro.estudoandroid01.util;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 
